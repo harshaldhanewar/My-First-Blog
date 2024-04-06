@@ -1,0 +1,14 @@
+.home{
+    display: flex;
+}
+
+.posts {
+    flex: 14;
+    /* border:3px solid yellow */
+}
+
+
+.sidebar {
+    flex: 1;
+    /* border: 3px solid red */
+}
