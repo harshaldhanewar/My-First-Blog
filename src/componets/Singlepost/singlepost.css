@@ -20,6 +20,7 @@ padding-right: 0;
     margin: 10px;
     font-family: 'Lora', serif;
     font-size: 20px;
+    color: rgb(195, 38, 64);
 
 }
 .singlePostEdit{
@@ -50,9 +51,13 @@ padding-right: 0;
     font-family: 'Varela Round', sans-serif;
 }
 .singlePostDesc{
+    width: 850px;
+    height: 200px;
+    word-wrap: break-word;
     color: #666;
     font-size: 18px;
     line-height: 25px;
+
 
 
 }

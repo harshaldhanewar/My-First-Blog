@@ -8,7 +8,7 @@ function Sidebar(){
             <span className="sidebarTitle">
                 ABOUT ME
             </span>
-            <img src="https://t3.ftcdn.net/jpg/02/43/12/34/240_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="Myimageishere" />
+            <img className="sidebarImg"  src="https://t3.ftcdn.net/jpg/02/43/12/34/240_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg" alt="Myimageishere" />
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse facilis ipsa officiis, nisi nostrum nesciunt commodi cumque facere enim mollitia quo laborum dolor libero veniam,</p>
        
         </div>
@@ -17,7 +17,7 @@ function Sidebar(){
                 CATEGORIRES
             </span>
             <ul className="sidebarList">
-                <li className="sidebarListItem">Lifr</li>
+                <li className="sidebarListItem">Life</li>
                 <li className="sidebarListItem">Music</li>
                 <li className="sidebarListItem">style</li>
                 <li className="sidebarListItem">Sport</li>

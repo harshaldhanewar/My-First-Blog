@@ -1,13 +1,14 @@
 import React from "react";
 import "./header.css";
 
-function Header(){
+function Header(props){
+  
 return <div className="header">
 <div className="headerTitle">
-<span className="headerTitleSm">React & Node</span>
-<span className="headerTitleLg">Blog</span>
+{/* <span className="headerTitleSm">React & Node</span>
+<span className="headerTitleLg">Blog</span> */}
 </div>
-<img className="headerImg" src="https://www.farmersalmanac.com/wp-content/uploads/2020/11/sunrise.jpg" alt="headerImg" />
+<img className="headerImg" src="https://technikology.com/wp-content/uploads/2020/12/blogging-smb.png" alt="headerImg" />
 </div>
 }
 export default Header;

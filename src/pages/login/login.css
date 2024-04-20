@@ -7,7 +7,7 @@
         rgba(255,255,255,0.5),
         rgba(255,255,255,0.5)
     
-    ), url("https://assets.newatlas.com/dims4/default/a05627b/2147483647/strip/true/crop/2000x1333+0+1/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F8a%2F13%2F564870064cf4b1deeac423436bcd%2Fdepositphotos-151972082-l-2015.jpg");
+    ), url("../../../download.avif");
     background-size: cover;
     align-items: center;
 
@@ -44,6 +44,19 @@ flex-direction: column;
     color: white;
     border-radius: 10px;
     padding: 10px;
+
+}
+.loginButton:active{
+    margin-top: 20px;
+    cursor: pointer
+    ;
+    background-color: rgb(210, 54, 54);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    scale:1.02;
+    transform: translateY(5px);
 
 }
 

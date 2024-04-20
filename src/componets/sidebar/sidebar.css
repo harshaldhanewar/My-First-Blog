@@ -8,6 +8,7 @@
 flex-direction: column;
 align-items: center;
 
+
 }
 
 .sidebarItem{
@@ -34,6 +35,8 @@ align-items: center;
 
 .sidebarItem>img{
     margin-top: 15px;
+    width: 250px;
+   
 
 }
 

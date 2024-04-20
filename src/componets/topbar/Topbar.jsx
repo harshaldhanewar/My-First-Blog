@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./topBar.css";
 import { Link } from "react-router-dom";
-function TopBar(){
-    const user =false;
+import axios from "axios";
+
+function TopBar(props){
+const [user,setuser]=useState();
+
+
+
+async function logOutStatuss(){
+    const loginStatus= await axios.get("http://localhost:5000/logOutStatuss");
+    console.log(loginStatus.data.rows[0].loginstatus);
+    if(loginStatus.data.rows[0].loginstatus){
+
+        setuser(true);
+    }
+}
+
+
+useEffect(()=>{
+    logOutStatuss()
+},[]);
+
+async function logOutStatus(){
+  window.location.reload();
+
+    const loginStatus= await axios.get("http://localhost:5000/logOutStatus");
+    console.log(loginStatus.data.rows[0].loginstatus);
+        setuser(false);
+}
     return(
         <div className="top">
             <div className="topLeft">
@@ -17,28 +43,35 @@ function TopBar(){
                         <Link to ="/" className="link" >HOME</Link>
                     </li>
                     <li className="topListItem">
-                    <Link to ="/" className="link" >ABOUT</Link>
-                    </li>
-                    <li className="topListItem">
-                    <Link to ="/" className="link" >CONTACT</Link>
-                    </li>
-                    <li className="topListItem">
                     <Link to ="/write" className="link" >WRITE</Link>
+
                     </li>
                     <li className="topListItem">
+                    <Link to ="/about" className="link" >ABOUT</Link>
+
+                    </li>
+                    <li className="topListItem">
+                    <Link to ="/contact" className="link" >CONTACT</Link>
+
+                    </li>
+                    <li className="topListItem" onClick={logOutStatus} >
                    {
                     user&&"LOGOUT"
+                    
                    }
                     </li>
                 </ul>
             </div>
             <div className="topRight">
                 {
-                    user?( <img className="topImg"
-                    src="https://media.licdn.com/dms/image/D5603AQHjQycUFvB9nQ/profile-displayphoto-shrink_800_800/0/1667746496101?e=1708560000&v=beta&t=hp8CffJBq0pIn_WEhwDMrNOqKY8tL59-kAwM5oFcA1U" alt="PropfileImage" />):(
+                    user?( 
+                  
+                  <Link to="/setting" className="link">  <img className="topImg"
+                  src="https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/optimized/4X/0/3/1/031b0eafd9e889b7ed5e6aee6c63fb1b1b157e82_2_498x500.jpeg" alt="Profile" /></Link>
+                    ):(
                         <ul className="toplist">
                             <li className="topListItem">
-                            <Link to ="/login" className="link">LOGIN</Link>
+                            <Link to ="/login" className="link" >LOGIN</Link>
                             </li>
                        
                             <li className="topListItem">
